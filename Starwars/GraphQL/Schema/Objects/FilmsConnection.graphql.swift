@@ -3,7 +3,7 @@
 
 import ApolloAPI
 
-public extension Objects {
+public extension GraphQL.Objects {
   /// A connection to a list of items.
   static let FilmsConnection = Object(
     typename: "FilmsConnection",

@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 import Apollo
 import ApolloAPI
-import GraphQL
-
 
 final class FavoriteViewController : UIViewController {
     
@@ -19,11 +17,10 @@ final class FavoriteViewController : UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Favorite"
-
        
-        Network.shared.apolloClient.fetch(query: GetAllFilmsQuery()) { result in
+        Network.shared.apolloClient.fetch(query: GraphQL.GetAllFilmsQuery()) { result in
           guard let data = try? result.get().data else { return }
-          print(data.hero.name) // Luke Skywalker
+          print(data.allFilms?.films) // Luke Skywalker
         }
         
         

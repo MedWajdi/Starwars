@@ -3,10 +3,10 @@
 
 import ApolloAPI
 
-public extension Objects {
+public extension GraphQL.Objects {
   /// A single film.
   static let Film = Object(
     typename: "Film",
-    implementedInterfaces: [Interfaces.Node.self]
+    implementedInterfaces: [GraphQL.Interfaces.Node.self]
   )
 }

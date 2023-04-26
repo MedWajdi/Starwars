@@ -3,10 +3,10 @@
 
 import ApolloAPI
 
-public extension Objects {
+public extension GraphQL.Objects {
   /// An individual person or character within the Star Wars universe.
   static let Person = Object(
     typename: "Person",
-    implementedInterfaces: [Interfaces.Node.self]
+    implementedInterfaces: [GraphQL.Interfaces.Node.self]
   )
 }

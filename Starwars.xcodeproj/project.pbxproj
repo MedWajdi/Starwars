@@ -21,11 +21,24 @@
 		1E7848C029F7D25900D941C1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848BF29F7D25900D941C1 /* MenuViewController.swift */; };
 		1E7848C229F7D26B00D941C1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */; };
 		1EE37A2D29F91CFF0082DCD0 /* GetAllFilms.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2829F91CFF0082DCD0 /* GetAllFilms.graphql */; };
-		1EE37A2E29F91CFF0082DCD0 /* apollo-ios-cli in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2929F91CFF0082DCD0 /* apollo-ios-cli */; };
 		1EE37A2F29F91CFF0082DCD0 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2A29F91CFF0082DCD0 /* apollo-codegen-config.json */; };
-		1EE37A3029F91CFF0082DCD0 /* GraphQL in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2B29F91CFF0082DCD0 /* GraphQL */; };
 		1EE37A3129F91CFF0082DCD0 /* star-wars-swapi@current.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2C29F91CFF0082DCD0 /* star-wars-swapi@current.graphqls */; };
 		1EFAEDDD29F80E490013022F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAEDDC29F80E490013022F /* Network.swift */; };
+		234C8D1829F925EF0004AFA5 /* GetAllFilmsQuery.graphql.swift in Resources */ = {isa = PBXBuildFile; fileRef = 23AE4CF229F9255900E09B3A /* GetAllFilmsQuery.graphql.swift */; };
+		23AE4D0329F9255900E09B3A /* GetAllFilmsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CF229F9255900E09B3A /* GetAllFilmsQuery.graphql.swift */; };
+		23AE4D0429F9255900E09B3A /* Species.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CF529F9255900E09B3A /* Species.graphql.swift */; };
+		23AE4D0529F9255900E09B3A /* Person.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CF629F9255900E09B3A /* Person.graphql.swift */; };
+		23AE4D0629F9255900E09B3A /* Root.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CF729F9255900E09B3A /* Root.graphql.swift */; };
+		23AE4D0729F9255900E09B3A /* FilmsConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CF829F9255900E09B3A /* FilmsConnection.graphql.swift */; };
+		23AE4D0829F9255900E09B3A /* Starship.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CF929F9255900E09B3A /* Starship.graphql.swift */; };
+		23AE4D0929F9255900E09B3A /* FilmSpeciesConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CFA29F9255900E09B3A /* FilmSpeciesConnection.graphql.swift */; };
+		23AE4D0A29F9255900E09B3A /* Planet.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CFB29F9255900E09B3A /* Planet.graphql.swift */; };
+		23AE4D0B29F9255900E09B3A /* Vehicle.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CFC29F9255900E09B3A /* Vehicle.graphql.swift */; };
+		23AE4D0C29F9255900E09B3A /* Film.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CFD29F9255900E09B3A /* Film.graphql.swift */; };
+		23AE4D0D29F9255900E09B3A /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CFE29F9255900E09B3A /* SchemaConfiguration.swift */; };
+		23AE4D0E29F9255900E09B3A /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CFF29F9255900E09B3A /* SchemaMetadata.graphql.swift */; };
+		23AE4D0F29F9255900E09B3A /* Node.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4D0129F9255900E09B3A /* Node.graphql.swift */; };
+		23AE4D1029F9255900E09B3A /* GraphQL.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4D0229F9255900E09B3A /* GraphQL.graphql.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +74,23 @@
 		1E7848BF29F7D25900D941C1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		1EE37A2829F91CFF0082DCD0 /* GetAllFilms.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GetAllFilms.graphql; sourceTree = "<group>"; };
-		1EE37A2929F91CFF0082DCD0 /* apollo-ios-cli */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "apollo-ios-cli"; sourceTree = "<group>"; };
 		1EE37A2A29F91CFF0082DCD0 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
-		1EE37A2B29F91CFF0082DCD0 /* GraphQL */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GraphQL; sourceTree = "<group>"; };
 		1EE37A2C29F91CFF0082DCD0 /* star-wars-swapi@current.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "star-wars-swapi@current.graphqls"; sourceTree = "<group>"; };
 		1EFAEDDC29F80E490013022F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		23AE4CF229F9255900E09B3A /* GetAllFilmsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAllFilmsQuery.graphql.swift; sourceTree = "<group>"; };
+		23AE4CF529F9255900E09B3A /* Species.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Species.graphql.swift; sourceTree = "<group>"; };
+		23AE4CF629F9255900E09B3A /* Person.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.graphql.swift; sourceTree = "<group>"; };
+		23AE4CF729F9255900E09B3A /* Root.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Root.graphql.swift; sourceTree = "<group>"; };
+		23AE4CF829F9255900E09B3A /* FilmsConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsConnection.graphql.swift; sourceTree = "<group>"; };
+		23AE4CF929F9255900E09B3A /* Starship.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.graphql.swift; sourceTree = "<group>"; };
+		23AE4CFA29F9255900E09B3A /* FilmSpeciesConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmSpeciesConnection.graphql.swift; sourceTree = "<group>"; };
+		23AE4CFB29F9255900E09B3A /* Planet.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.graphql.swift; sourceTree = "<group>"; };
+		23AE4CFC29F9255900E09B3A /* Vehicle.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.graphql.swift; sourceTree = "<group>"; };
+		23AE4CFD29F9255900E09B3A /* Film.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.graphql.swift; sourceTree = "<group>"; };
+		23AE4CFE29F9255900E09B3A /* SchemaConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
+		23AE4CFF29F9255900E09B3A /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
+		23AE4D0129F9255900E09B3A /* Node.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.graphql.swift; sourceTree = "<group>"; };
+		23AE4D0229F9255900E09B3A /* GraphQL.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQL.graphql.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,13 +210,65 @@
 		1EE37A2729F91CDF0082DCD0 /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
+				23AE4D0229F9255900E09B3A /* GraphQL.graphql.swift */,
+				23AE4CF029F9255900E09B3A /* Operations */,
+				23AE4CF329F9255900E09B3A /* Schema */,
 				1EE37A2A29F91CFF0082DCD0 /* apollo-codegen-config.json */,
-				1EE37A2929F91CFF0082DCD0 /* apollo-ios-cli */,
 				1EE37A2829F91CFF0082DCD0 /* GetAllFilms.graphql */,
-				1EE37A2B29F91CFF0082DCD0 /* GraphQL */,
 				1EE37A2C29F91CFF0082DCD0 /* star-wars-swapi@current.graphqls */,
 			);
 			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		23AE4CF029F9255900E09B3A /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				23AE4CF129F9255900E09B3A /* Queries */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		23AE4CF129F9255900E09B3A /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				23AE4CF229F9255900E09B3A /* GetAllFilmsQuery.graphql.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		23AE4CF329F9255900E09B3A /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				23AE4CF429F9255900E09B3A /* Objects */,
+				23AE4CFE29F9255900E09B3A /* SchemaConfiguration.swift */,
+				23AE4CFF29F9255900E09B3A /* SchemaMetadata.graphql.swift */,
+				23AE4D0029F9255900E09B3A /* Interfaces */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		23AE4CF429F9255900E09B3A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				23AE4CF529F9255900E09B3A /* Species.graphql.swift */,
+				23AE4CF629F9255900E09B3A /* Person.graphql.swift */,
+				23AE4CF729F9255900E09B3A /* Root.graphql.swift */,
+				23AE4CF829F9255900E09B3A /* FilmsConnection.graphql.swift */,
+				23AE4CF929F9255900E09B3A /* Starship.graphql.swift */,
+				23AE4CFA29F9255900E09B3A /* FilmSpeciesConnection.graphql.swift */,
+				23AE4CFB29F9255900E09B3A /* Planet.graphql.swift */,
+				23AE4CFC29F9255900E09B3A /* Vehicle.graphql.swift */,
+				23AE4CFD29F9255900E09B3A /* Film.graphql.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		23AE4D0029F9255900E09B3A /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				23AE4D0129F9255900E09B3A /* Node.graphql.swift */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,11 +385,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE37A3029F91CFF0082DCD0 /* GraphQL in Resources */,
+				234C8D1829F925EF0004AFA5 /* GetAllFilmsQuery.graphql.swift in Resources */,
 				1EE37A3129F91CFF0082DCD0 /* star-wars-swapi@current.graphqls in Resources */,
 				1E78489229F7CAEF00D941C1 /* LaunchScreen.storyboard in Resources */,
 				1E78488F29F7CAEF00D941C1 /* Assets.xcassets in Resources */,
-				1EE37A2E29F91CFF0082DCD0 /* apollo-ios-cli in Resources */,
 				1EE37A2F29F91CFF0082DCD0 /* apollo-codegen-config.json in Resources */,
 				1EE37A2D29F91CFF0082DCD0 /* GetAllFilms.graphql in Resources */,
 			);
@@ -339,11 +415,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23AE4D1029F9255900E09B3A /* GraphQL.graphql.swift in Sources */,
+				23AE4D0D29F9255900E09B3A /* SchemaConfiguration.swift in Sources */,
 				1E7848C029F7D25900D941C1 /* MenuViewController.swift in Sources */,
+				23AE4D0429F9255900E09B3A /* Species.graphql.swift in Sources */,
+				23AE4D0C29F9255900E09B3A /* Film.graphql.swift in Sources */,
+				23AE4D0329F9255900E09B3A /* GetAllFilmsQuery.graphql.swift in Sources */,
+				23AE4D0929F9255900E09B3A /* FilmSpeciesConnection.graphql.swift in Sources */,
+				23AE4D0A29F9255900E09B3A /* Planet.graphql.swift in Sources */,
+				23AE4D0529F9255900E09B3A /* Person.graphql.swift in Sources */,
+				23AE4D0829F9255900E09B3A /* Starship.graphql.swift in Sources */,
+				23AE4D0B29F9255900E09B3A /* Vehicle.graphql.swift in Sources */,
+				23AE4D0F29F9255900E09B3A /* Node.graphql.swift in Sources */,
+				23AE4D0629F9255900E09B3A /* Root.graphql.swift in Sources */,
 				1E7848C229F7D26B00D941C1 /* FavoriteViewController.swift in Sources */,
 				1E7848BE29F7D19400D941C1 /* TabBarController.swift in Sources */,
 				1E78488629F7CAED00D941C1 /* AppDelegate.swift in Sources */,
 				1EFAEDDD29F80E490013022F /* Network.swift in Sources */,
+				23AE4D0729F9255900E09B3A /* FilmsConnection.graphql.swift in Sources */,
+				23AE4D0E29F9255900E09B3A /* SchemaMetadata.graphql.swift in Sources */,
 				1E78488829F7CAED00D941C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

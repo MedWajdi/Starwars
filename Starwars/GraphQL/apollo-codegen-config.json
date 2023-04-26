@@ -14,10 +14,11 @@
       }
     },
     "schemaTypes" : {
-      "path" : "./GraphQL",
+      "path" : "./",
       "moduleType" : {
-        "swiftPackageManager" : {
-        }
+          "embeddedInTarget": {
+              "name": "GraphQL/Generated"
+          }
       }
     },
     "operations" : {
