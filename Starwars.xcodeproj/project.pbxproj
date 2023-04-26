@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E16F1A229F7E46400F7682B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E16F1A129F7E46400F7682B /* SnapKit */; };
+		1E16F1A529F7F4B400F7682B /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 1E16F1A429F7F4B400F7682B /* Apollo */; };
 		1E78488629F7CAED00D941C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78488529F7CAED00D941C1 /* AppDelegate.swift */; };
 		1E78488829F7CAED00D941C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78488729F7CAED00D941C1 /* SceneDelegate.swift */; };
-		1E78488A29F7CAED00D941C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78488929F7CAED00D941C1 /* ViewController.swift */; };
-		1E78488D29F7CAED00D941C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E78488B29F7CAED00D941C1 /* Main.storyboard */; };
 		1E78488F29F7CAEF00D941C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E78488E29F7CAEF00D941C1 /* Assets.xcassets */; };
 		1E78489229F7CAEF00D941C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E78489029F7CAEF00D941C1 /* LaunchScreen.storyboard */; };
 		1E78489D29F7CAF000D941C1 /* StarwarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78489C29F7CAF000D941C1 /* StarwarsTests.swift */; };
 		1E7848A729F7CAF000D941C1 /* StarwarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848A629F7CAF000D941C1 /* StarwarsUITests.swift */; };
 		1E7848A929F7CAF000D941C1 /* StarwarsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848A829F7CAF000D941C1 /* StarwarsUITestsLaunchTests.swift */; };
+		1E7848BC29F7CD7900D941C1 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7848BB29F7CD7900D941C1 /* ComposableArchitecture */; };
+		1E7848BE29F7D19400D941C1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848BD29F7D19400D941C1 /* TabBarController.swift */; };
+		1E7848C029F7D25900D941C1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848BF29F7D25900D941C1 /* MenuViewController.swift */; };
+		1E7848C229F7D26B00D941C1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */; };
+		1EE37A2D29F91CFF0082DCD0 /* GetAllFilms.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2829F91CFF0082DCD0 /* GetAllFilms.graphql */; };
+		1EE37A2E29F91CFF0082DCD0 /* apollo-ios-cli in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2929F91CFF0082DCD0 /* apollo-ios-cli */; };
+		1EE37A2F29F91CFF0082DCD0 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2A29F91CFF0082DCD0 /* apollo-codegen-config.json */; };
+		1EE37A3029F91CFF0082DCD0 /* GraphQL in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2B29F91CFF0082DCD0 /* GraphQL */; };
+		1EE37A3129F91CFF0082DCD0 /* star-wars-swapi@current.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2C29F91CFF0082DCD0 /* star-wars-swapi@current.graphqls */; };
+		1EFAEDDD29F80E490013022F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAEDDC29F80E490013022F /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +49,6 @@
 		1E78488229F7CAED00D941C1 /* Starwars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starwars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E78488529F7CAED00D941C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E78488729F7CAED00D941C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1E78488929F7CAED00D941C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1E78488C29F7CAED00D941C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E78488E29F7CAEF00D941C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E78489129F7CAEF00D941C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E78489329F7CAEF00D941C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +57,15 @@
 		1E7848A229F7CAF000D941C1 /* StarwarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarwarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7848A629F7CAF000D941C1 /* StarwarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarwarsUITests.swift; sourceTree = "<group>"; };
 		1E7848A829F7CAF000D941C1 /* StarwarsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarwarsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1E7848BD29F7D19400D941C1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1E7848BF29F7D25900D941C1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		1EE37A2829F91CFF0082DCD0 /* GetAllFilms.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GetAllFilms.graphql; sourceTree = "<group>"; };
+		1EE37A2929F91CFF0082DCD0 /* apollo-ios-cli */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = "apollo-ios-cli"; sourceTree = "<group>"; };
+		1EE37A2A29F91CFF0082DCD0 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
+		1EE37A2B29F91CFF0082DCD0 /* GraphQL */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GraphQL; sourceTree = "<group>"; };
+		1EE37A2C29F91CFF0082DCD0 /* star-wars-swapi@current.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "star-wars-swapi@current.graphqls"; sourceTree = "<group>"; };
+		1EFAEDDC29F80E490013022F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7848BC29F7CD7900D941C1 /* ComposableArchitecture in Frameworks */,
+				1E16F1A529F7F4B400F7682B /* Apollo in Frameworks */,
+				1E16F1A229F7E46400F7682B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,11 +119,11 @@
 		1E78488429F7CAED00D941C1 /* Starwars */ = {
 			isa = PBXGroup;
 			children = (
-				1E78488529F7CAED00D941C1 /* AppDelegate.swift */,
-				1E78488729F7CAED00D941C1 /* SceneDelegate.swift */,
-				1E78488929F7CAED00D941C1 /* ViewController.swift */,
-				1E78488B29F7CAED00D941C1 /* Main.storyboard */,
-				1E78488E29F7CAEF00D941C1 /* Assets.xcassets */,
+				1EE37A2729F91CDF0082DCD0 /* GraphQL */,
+				1E7848C729F7D55F00D941C1 /* APIClient */,
+				1E7848C629F7D55100D941C1 /* Models */,
+				1E7848C429F7D40A00D941C1 /* Ressources */,
+				1E7848C329F7D3B900D941C1 /* Controllers */,
 				1E78489029F7CAEF00D941C1 /* LaunchScreen.storyboard */,
 				1E78489329F7CAEF00D941C1 /* Info.plist */,
 			);
@@ -127,6 +147,53 @@
 			path = StarwarsUITests;
 			sourceTree = "<group>";
 		};
+		1E7848C329F7D3B900D941C1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E7848BD29F7D19400D941C1 /* TabBarController.swift */,
+				1E7848BF29F7D25900D941C1 /* MenuViewController.swift */,
+				1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1E7848C429F7D40A00D941C1 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				1E78488529F7CAED00D941C1 /* AppDelegate.swift */,
+				1E78488729F7CAED00D941C1 /* SceneDelegate.swift */,
+				1E78488E29F7CAEF00D941C1 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		1E7848C629F7D55100D941C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1E7848C729F7D55F00D941C1 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				1EFAEDDC29F80E490013022F /* Network.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		1EE37A2729F91CDF0082DCD0 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				1EE37A2A29F91CFF0082DCD0 /* apollo-codegen-config.json */,
+				1EE37A2929F91CFF0082DCD0 /* apollo-ios-cli */,
+				1EE37A2829F91CFF0082DCD0 /* GetAllFilms.graphql */,
+				1EE37A2B29F91CFF0082DCD0 /* GraphQL */,
+				1EE37A2C29F91CFF0082DCD0 /* star-wars-swapi@current.graphqls */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +210,11 @@
 			dependencies = (
 			);
 			name = Starwars;
+			packageProductDependencies = (
+				1E7848BB29F7CD7900D941C1 /* ComposableArchitecture */,
+				1E16F1A129F7E46400F7682B /* SnapKit */,
+				1E16F1A429F7F4B400F7682B /* Apollo */,
+			);
 			productName = Starwars;
 			productReference = 1E78488229F7CAED00D941C1 /* Starwars.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +287,11 @@
 				Base,
 			);
 			mainGroup = 1E78487929F7CAED00D941C1;
+			packageReferences = (
+				1E7848BA29F7CD7900D941C1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				1E16F1A029F7E46400F7682B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1E16F1A329F7F4B400F7682B /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 1E78488329F7CAED00D941C1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +308,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE37A3029F91CFF0082DCD0 /* GraphQL in Resources */,
+				1EE37A3129F91CFF0082DCD0 /* star-wars-swapi@current.graphqls in Resources */,
 				1E78489229F7CAEF00D941C1 /* LaunchScreen.storyboard in Resources */,
 				1E78488F29F7CAEF00D941C1 /* Assets.xcassets in Resources */,
-				1E78488D29F7CAED00D941C1 /* Main.storyboard in Resources */,
+				1EE37A2E29F91CFF0082DCD0 /* apollo-ios-cli in Resources */,
+				1EE37A2F29F91CFF0082DCD0 /* apollo-codegen-config.json in Resources */,
+				1EE37A2D29F91CFF0082DCD0 /* GetAllFilms.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +339,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E78488A29F7CAED00D941C1 /* ViewController.swift in Sources */,
+				1E7848C029F7D25900D941C1 /* MenuViewController.swift in Sources */,
+				1E7848C229F7D26B00D941C1 /* FavoriteViewController.swift in Sources */,
+				1E7848BE29F7D19400D941C1 /* TabBarController.swift in Sources */,
 				1E78488629F7CAED00D941C1 /* AppDelegate.swift in Sources */,
+				1EFAEDDD29F80E490013022F /* Network.swift in Sources */,
 				1E78488829F7CAED00D941C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +381,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1E78488B29F7CAED00D941C1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1E78488C29F7CAED00D941C1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1E78489029F7CAEF00D941C1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -437,11 +513,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25HGHW838J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Starwars/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -464,11 +540,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25HGHW838J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Starwars/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,6 +672,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E16F1A029F7E46400F7682B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		1E16F1A329F7F4B400F7682B /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		1E7848BA29F7CD7900D941C1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E16F1A129F7E46400F7682B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E16F1A029F7E46400F7682B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1E16F1A429F7F4B400F7682B /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E16F1A329F7F4B400F7682B /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		1E7848BB29F7CD7900D941C1 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E7848BA29F7CD7900D941C1 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E78487A29F7CAED00D941C1 /* Project object */;
 }
