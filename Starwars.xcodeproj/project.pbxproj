@@ -31,7 +31,6 @@
 		23AE4D0629F9255900E09B3A /* Root.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CF729F9255900E09B3A /* Root.graphql.swift */; };
 		23AE4D0729F9255900E09B3A /* FilmsConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CF829F9255900E09B3A /* FilmsConnection.graphql.swift */; };
 		23AE4D0829F9255900E09B3A /* Starship.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CF929F9255900E09B3A /* Starship.graphql.swift */; };
-		23AE4D0929F9255900E09B3A /* FilmSpeciesConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CFA29F9255900E09B3A /* FilmSpeciesConnection.graphql.swift */; };
 		23AE4D0A29F9255900E09B3A /* Planet.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CFB29F9255900E09B3A /* Planet.graphql.swift */; };
 		23AE4D0B29F9255900E09B3A /* Vehicle.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CFC29F9255900E09B3A /* Vehicle.graphql.swift */; };
 		23AE4D0C29F9255900E09B3A /* Film.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4CFD29F9255900E09B3A /* Film.graphql.swift */; };
@@ -83,7 +82,6 @@
 		23AE4CF729F9255900E09B3A /* Root.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Root.graphql.swift; sourceTree = "<group>"; };
 		23AE4CF829F9255900E09B3A /* FilmsConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmsConnection.graphql.swift; sourceTree = "<group>"; };
 		23AE4CF929F9255900E09B3A /* Starship.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.graphql.swift; sourceTree = "<group>"; };
-		23AE4CFA29F9255900E09B3A /* FilmSpeciesConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmSpeciesConnection.graphql.swift; sourceTree = "<group>"; };
 		23AE4CFB29F9255900E09B3A /* Planet.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.graphql.swift; sourceTree = "<group>"; };
 		23AE4CFC29F9255900E09B3A /* Vehicle.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.graphql.swift; sourceTree = "<group>"; };
 		23AE4CFD29F9255900E09B3A /* Film.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.graphql.swift; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 				23AE4CF729F9255900E09B3A /* Root.graphql.swift */,
 				23AE4CF829F9255900E09B3A /* FilmsConnection.graphql.swift */,
 				23AE4CF929F9255900E09B3A /* Starship.graphql.swift */,
-				23AE4CFA29F9255900E09B3A /* FilmSpeciesConnection.graphql.swift */,
 				23AE4CFB29F9255900E09B3A /* Planet.graphql.swift */,
 				23AE4CFC29F9255900E09B3A /* Vehicle.graphql.swift */,
 				23AE4CFD29F9255900E09B3A /* Film.graphql.swift */,
@@ -421,7 +418,6 @@
 				23AE4D0429F9255900E09B3A /* Species.graphql.swift in Sources */,
 				23AE4D0C29F9255900E09B3A /* Film.graphql.swift in Sources */,
 				23AE4D0329F9255900E09B3A /* GetAllFilmsQuery.graphql.swift in Sources */,
-				23AE4D0929F9255900E09B3A /* FilmSpeciesConnection.graphql.swift in Sources */,
 				23AE4D0A29F9255900E09B3A /* Planet.graphql.swift in Sources */,
 				23AE4D0529F9255900E09B3A /* Person.graphql.swift in Sources */,
 				23AE4D0829F9255900E09B3A /* Starship.graphql.swift in Sources */,

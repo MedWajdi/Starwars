@@ -39,7 +39,6 @@ public extension GraphQL {
       case "Species": return GraphQL.Objects.Species
       case "Starship": return GraphQL.Objects.Starship
       case "Vehicle": return GraphQL.Objects.Vehicle
-      case "FilmSpeciesConnection": return GraphQL.Objects.FilmSpeciesConnection
       default: return nil
       }
     }

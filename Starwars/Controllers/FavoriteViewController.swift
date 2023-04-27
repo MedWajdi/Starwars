@@ -17,12 +17,24 @@ final class FavoriteViewController : UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Favorite"
-       
+        print("==============================")
+        getData()
+        print("==============================")
+
+    }
+    
+    
+    private func getData(){
         Network.shared.apolloClient.fetch(query: GraphQL.GetAllFilmsQuery()) { result in
-          guard let data = try? result.get().data else { return }
-          print(data.allFilms?.films) // Luke Skywalker
+            print(result)
+            guard let data = try? result.get().data else { return }
+            
+            print(data.allFilms as Any)
+            if let films = data.allFilms?.films {
+                    print(films)
+            }
+            
         }
-        
         
     }
     
