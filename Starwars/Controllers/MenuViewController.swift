@@ -9,15 +9,20 @@ import UIKit
 
 
 final class MenuViewController: UIViewController {
+    private let filmsListView = FilmsListView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Menu"
+        setUpView()
         
     }
     
-    
+    private func setUpView(){
+        view.addSubview(filmsListView)
+        
+    }
 
     
     

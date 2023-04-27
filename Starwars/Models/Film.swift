@@ -8,5 +8,5 @@
 import Foundation
 
 struct Film :Codable {
-    
+    let title :String
 }
