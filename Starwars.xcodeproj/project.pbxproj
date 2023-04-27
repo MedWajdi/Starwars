@@ -20,6 +20,11 @@
 		1E7848BE29F7D19400D941C1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848BD29F7D19400D941C1 /* TabBarController.swift */; };
 		1E7848C029F7D25900D941C1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848BF29F7D25900D941C1 /* MenuViewController.swift */; };
 		1E7848C229F7D26B00D941C1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */; };
+		1E91C5B629FA71C4008288A0 /* FilmsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5B529FA71C4008288A0 /* FilmsListView.swift */; };
+		1E91C5B829FA7256008288A0 /* FilmsListViewViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5B729FA7256008288A0 /* FilmsListViewViewModal.swift */; };
+		1E91C5BA29FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5B929FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift */; };
+		1E91C5BC29FA9200008288A0 /* FilmsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5BB29FA9200008288A0 /* FilmsCollectionViewCell.swift */; };
+		1E91C5BE29FAAEC8008288A0 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5BD29FAAEC8008288A0 /* Film.swift */; };
 		1EE37A2D29F91CFF0082DCD0 /* GetAllFilms.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2829F91CFF0082DCD0 /* GetAllFilms.graphql */; };
 		1EE37A2F29F91CFF0082DCD0 /* apollo-codegen-config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2A29F91CFF0082DCD0 /* apollo-codegen-config.json */; };
 		1EE37A3129F91CFF0082DCD0 /* star-wars-swapi@current.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 1EE37A2C29F91CFF0082DCD0 /* star-wars-swapi@current.graphqls */; };
@@ -72,6 +77,11 @@
 		1E7848BD29F7D19400D941C1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1E7848BF29F7D25900D941C1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		1E91C5B529FA71C4008288A0 /* FilmsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListView.swift; sourceTree = "<group>"; };
+		1E91C5B729FA7256008288A0 /* FilmsListViewViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListViewViewModal.swift; sourceTree = "<group>"; };
+		1E91C5B929FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsCollectionViewCellViewModal.swift; sourceTree = "<group>"; };
+		1E91C5BB29FA9200008288A0 /* FilmsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsCollectionViewCell.swift; sourceTree = "<group>"; };
+		1E91C5BD29FAAEC8008288A0 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		1EE37A2829F91CFF0082DCD0 /* GetAllFilms.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GetAllFilms.graphql; sourceTree = "<group>"; };
 		1EE37A2A29F91CFF0082DCD0 /* apollo-codegen-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "apollo-codegen-config.json"; sourceTree = "<group>"; };
 		1EE37A2C29F91CFF0082DCD0 /* star-wars-swapi@current.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "star-wars-swapi@current.graphqls"; sourceTree = "<group>"; };
@@ -145,8 +155,10 @@
 				1EE37A2729F91CDF0082DCD0 /* GraphQL */,
 				1E7848C729F7D55F00D941C1 /* APIClient */,
 				1E7848C629F7D55100D941C1 /* Models */,
-				1E7848C429F7D40A00D941C1 /* Ressources */,
 				1E7848C329F7D3B900D941C1 /* Controllers */,
+				1E91C5B329FA6FF5008288A0 /* ViewModel */,
+				1E91C5B429FA70AE008288A0 /* View */,
+				1E7848C429F7D40A00D941C1 /* Ressources */,
 				1E78489029F7CAEF00D941C1 /* LaunchScreen.storyboard */,
 				1E78489329F7CAEF00D941C1 /* Info.plist */,
 			);
@@ -193,6 +205,7 @@
 		1E7848C629F7D55100D941C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1E91C5BD29FAAEC8008288A0 /* Film.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,6 +216,24 @@
 				1EFAEDDC29F80E490013022F /* Network.swift */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		1E91C5B329FA6FF5008288A0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1E91C5B729FA7256008288A0 /* FilmsListViewViewModal.swift */,
+				1E91C5B929FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1E91C5B429FA70AE008288A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E91C5B529FA71C4008288A0 /* FilmsListView.swift */,
+				1E91C5BB29FA9200008288A0 /* FilmsCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1EE37A2729F91CDF0082DCD0 /* GraphQL */ = {
@@ -422,15 +453,20 @@
 				23AE4D0529F9255900E09B3A /* Person.graphql.swift in Sources */,
 				23AE4D0829F9255900E09B3A /* Starship.graphql.swift in Sources */,
 				23AE4D0B29F9255900E09B3A /* Vehicle.graphql.swift in Sources */,
+				1E91C5BC29FA9200008288A0 /* FilmsCollectionViewCell.swift in Sources */,
 				23AE4D0F29F9255900E09B3A /* Node.graphql.swift in Sources */,
+				1E91C5BA29FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift in Sources */,
+				1E91C5BE29FAAEC8008288A0 /* Film.swift in Sources */,
 				23AE4D0629F9255900E09B3A /* Root.graphql.swift in Sources */,
 				1E7848C229F7D26B00D941C1 /* FavoriteViewController.swift in Sources */,
 				1E7848BE29F7D19400D941C1 /* TabBarController.swift in Sources */,
 				1E78488629F7CAED00D941C1 /* AppDelegate.swift in Sources */,
 				1EFAEDDD29F80E490013022F /* Network.swift in Sources */,
+				1E91C5B629FA71C4008288A0 /* FilmsListView.swift in Sources */,
 				23AE4D0729F9255900E09B3A /* FilmsConnection.graphql.swift in Sources */,
 				23AE4D0E29F9255900E09B3A /* SchemaMetadata.graphql.swift in Sources */,
 				1E78488829F7CAED00D941C1 /* SceneDelegate.swift in Sources */,
+				1E91C5B829FA7256008288A0 /* FilmsListViewViewModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
