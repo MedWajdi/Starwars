@@ -3,7 +3,7 @@
 
 import ApolloAPI
 
-public extension Interfaces {
+public extension GraphQL.Interfaces {
   /// An object with an ID
   static let Node = Interface(name: "Node")
 }

@@ -3,7 +3,7 @@
 
 import ApolloAPI
 
-public extension Objects {
+public extension GraphQL.Objects {
   static let Root = Object(
     typename: "Root",
     implementedInterfaces: []

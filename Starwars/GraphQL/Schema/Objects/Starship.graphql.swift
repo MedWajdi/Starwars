@@ -3,10 +3,10 @@
 
 import ApolloAPI
 
-public extension Objects {
+public extension GraphQL.Objects {
   /// A single transport craft that has hyperdrive capability.
   static let Starship = Object(
     typename: "Starship",
-    implementedInterfaces: [Interfaces.Node.self]
+    implementedInterfaces: [GraphQL.Interfaces.Node.self]
   )
 }
