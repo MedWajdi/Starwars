@@ -25,11 +25,10 @@ public extension GraphQL {
 
     public struct Data: GraphQL.SelectionSet {
       public let __data: DataDict
-      public init(_dataDict: DataDict) { __data = _dataDict }
+      public init(data: DataDict) { __data = data }
 
       public static var __parentType: ApolloAPI.ParentType { GraphQL.Objects.Root }
       public static var __selections: [ApolloAPI.Selection] { [
-        .field("__typename", String.self),
         .field("allFilms", AllFilms?.self),
       ] }
 
@@ -40,11 +39,10 @@ public extension GraphQL {
       /// Parent Type: `FilmsConnection`
       public struct AllFilms: GraphQL.SelectionSet {
         public let __data: DataDict
-        public init(_dataDict: DataDict) { __data = _dataDict }
+        public init(data: DataDict) { __data = data }
 
         public static var __parentType: ApolloAPI.ParentType { GraphQL.Objects.FilmsConnection }
         public static var __selections: [ApolloAPI.Selection] { [
-          .field("__typename", String.self),
           .field("films", [Film?]?.self),
         ] }
 
@@ -61,11 +59,10 @@ public extension GraphQL {
         /// Parent Type: `Film`
         public struct Film: GraphQL.SelectionSet {
           public let __data: DataDict
-          public init(_dataDict: DataDict) { __data = _dataDict }
+          public init(data: DataDict) { __data = data }
 
           public static var __parentType: ApolloAPI.ParentType { GraphQL.Objects.Film }
           public static var __selections: [ApolloAPI.Selection] { [
-            .field("__typename", String.self),
             .field("title", String?.self),
           ] }
 

@@ -1,5 +1,5 @@
 {
-  "schemaNamespace" : "GraphQL",
+  "schemaName" : "GraphQL",
   "input" : {
     "operationSearchPaths" : [
       "**/*.graphql"
