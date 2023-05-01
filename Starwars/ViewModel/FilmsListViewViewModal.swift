@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 protocol FilmsListViewViewModalDelegate:AnyObject {
     func DidLoadInitalFilms()
 }
@@ -14,41 +15,49 @@ protocol FilmsListViewViewModalDelegate:AnyObject {
 final class FilmsListViewViewModal :NSObject {
     public weak var delegate : FilmsListViewViewModalDelegate?
     
-    private var films : [Film] = [] {
+    /*private var filmsList : [Film] = [] {
         didSet {
-            for film in films {
-                let viewModal = FilmsCollectionViewCellViewModal(filmTitle: film.title)
+            for film in filmsList {
+                //let viewModal = FilmsCollectionViewCellViewModal(filmTitle: (film.title)!)
                 cellViewModals.append(viewModal)
             }
         }
-    }
+    }*/
     
     private var cellViewModals : [FilmsCollectionViewCellViewModal] = []
     
-    //MARK:: fetchin data needed here
-    private func fetchCharacters() {
-        
+    // MARK: fetching data needed
+    func fetchFilms() {
+        Network.shared.apolloClient.fetch(query: GraphQL.GetAllFilmsQuery()) { result in
+            guard let data = try? result.get().data else { return }
+            
+            if let allFilms = data.allFilms?.films {
+
+                print("=============================")
+                let films = allFilms.map { Film($0) }
+                print(films)
+                
+                DispatchQueue.main.async {
+                    self.delegate?.DidLoadInitalFilms()
+                }
+            }
+        }
     }
-    
 }
 
 extension FilmsListViewViewModal:UICollectionViewDataSource ,UICollectionViewDelegate ,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellViewModals.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilmsCollectionViewCell.cellIdentifier, for: indexPath) as? FilmsCollectionViewCell else {
                 fatalError("Unsupported cell")
             }
-        
         let viewModal = cellViewModals[indexPath.row]
         cell.configure(with: viewModal)
-        
         return cell
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

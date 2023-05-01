@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E16F1A229F7E46400F7682B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E16F1A129F7E46400F7682B /* SnapKit */; };
 		1E16F1A529F7F4B400F7682B /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 1E16F1A429F7F4B400F7682B /* Apollo */; };
+		1E31E1BE29FFF3A600741C23 /* CharacterConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E31E1BD29FFF3A600741C23 /* CharacterConnection.swift */; };
+		1E31E1C129FFF4AD00741C23 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E31E1C029FFF4AD00741C23 /* Character.swift */; };
 		1E78488629F7CAED00D941C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78488529F7CAED00D941C1 /* AppDelegate.swift */; };
 		1E78488829F7CAED00D941C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E78488729F7CAED00D941C1 /* SceneDelegate.swift */; };
 		1E78488F29F7CAEF00D941C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E78488E29F7CAEF00D941C1 /* Assets.xcassets */; };
@@ -20,6 +22,7 @@
 		1E7848BE29F7D19400D941C1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848BD29F7D19400D941C1 /* TabBarController.swift */; };
 		1E7848C029F7D25900D941C1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848BF29F7D25900D941C1 /* MenuViewController.swift */; };
 		1E7848C229F7D26B00D941C1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */; };
+		1E827FC629FFFCDD00D67D02 /* FilmCharactersConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E827FC529FFFCDD00D67D02 /* FilmCharactersConnection.graphql.swift */; };
 		1E91C5B629FA71C4008288A0 /* FilmsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5B529FA71C4008288A0 /* FilmsListView.swift */; };
 		1E91C5B829FA7256008288A0 /* FilmsListViewViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5B729FA7256008288A0 /* FilmsListViewViewModal.swift */; };
 		1E91C5BA29FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5B929FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift */; };
@@ -63,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E31E1BD29FFF3A600741C23 /* CharacterConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterConnection.swift; sourceTree = "<group>"; };
+		1E31E1C029FFF4AD00741C23 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		1E78488229F7CAED00D941C1 /* Starwars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starwars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E78488529F7CAED00D941C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E78488729F7CAED00D941C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 		1E7848BD29F7D19400D941C1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1E7848BF29F7D25900D941C1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		1E827FC529FFFCDD00D67D02 /* FilmCharactersConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmCharactersConnection.graphql.swift; sourceTree = "<group>"; };
 		1E91C5B529FA71C4008288A0 /* FilmsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListView.swift; sourceTree = "<group>"; };
 		1E91C5B729FA7256008288A0 /* FilmsListViewViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListViewViewModal.swift; sourceTree = "<group>"; };
 		1E91C5B929FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsCollectionViewCellViewModal.swift; sourceTree = "<group>"; };
@@ -206,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				1E91C5BD29FAAEC8008288A0 /* Film.swift */,
+				1E31E1BD29FFF3A600741C23 /* CharacterConnection.swift */,
+				1E31E1C029FFF4AD00741C23 /* Character.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 		23AE4CF429F9255900E09B3A /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				1E827FC529FFFCDD00D67D02 /* FilmCharactersConnection.graphql.swift */,
 				23AE4CF529F9255900E09B3A /* Species.graphql.swift */,
 				23AE4CF629F9255900E09B3A /* Person.graphql.swift */,
 				23AE4CF729F9255900E09B3A /* Root.graphql.swift */,
@@ -445,8 +454,10 @@
 			files = (
 				23AE4D1029F9255900E09B3A /* GraphQL.graphql.swift in Sources */,
 				23AE4D0D29F9255900E09B3A /* SchemaConfiguration.swift in Sources */,
+				1E827FC629FFFCDD00D67D02 /* FilmCharactersConnection.graphql.swift in Sources */,
 				1E7848C029F7D25900D941C1 /* MenuViewController.swift in Sources */,
 				23AE4D0429F9255900E09B3A /* Species.graphql.swift in Sources */,
+				1E31E1BE29FFF3A600741C23 /* CharacterConnection.swift in Sources */,
 				23AE4D0C29F9255900E09B3A /* Film.graphql.swift in Sources */,
 				23AE4D0329F9255900E09B3A /* GetAllFilmsQuery.graphql.swift in Sources */,
 				23AE4D0A29F9255900E09B3A /* Planet.graphql.swift in Sources */,
@@ -455,6 +466,7 @@
 				23AE4D0B29F9255900E09B3A /* Vehicle.graphql.swift in Sources */,
 				1E91C5BC29FA9200008288A0 /* FilmsCollectionViewCell.swift in Sources */,
 				23AE4D0F29F9255900E09B3A /* Node.graphql.swift in Sources */,
+				1E31E1C129FFF4AD00741C23 /* Character.swift in Sources */,
 				1E91C5BA29FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift in Sources */,
 				1E91C5BE29FAAEC8008288A0 /* Film.swift in Sources */,
 				23AE4D0629F9255900E09B3A /* Root.graphql.swift in Sources */,
