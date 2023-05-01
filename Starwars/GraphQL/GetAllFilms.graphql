@@ -1,6 +1,22 @@
 query GetAllFilms {
   allFilms {
     films {
+      characterConnection {
+        characters {
+          birthYear
+          id
+          name
+        }
+        totalCount
+      }
+      created
+      director
+      edited
+      episodeID
+      id
+      openingCrawl
+      producers
+      releaseDate
       title
     }
   }
