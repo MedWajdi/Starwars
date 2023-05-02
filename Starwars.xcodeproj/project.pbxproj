@@ -23,6 +23,7 @@
 		1E7848C029F7D25900D941C1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848BF29F7D25900D941C1 /* MenuViewController.swift */; };
 		1E7848C229F7D26B00D941C1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */; };
 		1E827FC629FFFCDD00D67D02 /* FilmCharactersConnection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E827FC529FFFCDD00D67D02 /* FilmCharactersConnection.graphql.swift */; };
+		1E827FC82A00F86D00D67D02 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E827FC72A00F86D00D67D02 /* Extentions.swift */; };
 		1E91C5B629FA71C4008288A0 /* FilmsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5B529FA71C4008288A0 /* FilmsListView.swift */; };
 		1E91C5B829FA7256008288A0 /* FilmsListViewViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5B729FA7256008288A0 /* FilmsListViewViewModal.swift */; };
 		1E91C5BA29FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E91C5B929FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift */; };
@@ -83,6 +84,7 @@
 		1E7848BF29F7D25900D941C1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1E7848C129F7D26B00D941C1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		1E827FC529FFFCDD00D67D02 /* FilmCharactersConnection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmCharactersConnection.graphql.swift; sourceTree = "<group>"; };
+		1E827FC72A00F86D00D67D02 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		1E91C5B529FA71C4008288A0 /* FilmsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListView.swift; sourceTree = "<group>"; };
 		1E91C5B729FA7256008288A0 /* FilmsListViewViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListViewViewModal.swift; sourceTree = "<group>"; };
 		1E91C5B929FA9024008288A0 /* FilmsCollectionViewCellViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsCollectionViewCellViewModal.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				1E78488529F7CAED00D941C1 /* AppDelegate.swift */,
 				1E78488729F7CAED00D941C1 /* SceneDelegate.swift */,
+				1E827FC72A00F86D00D67D02 /* Extentions.swift */,
 				1E78488E29F7CAEF00D941C1 /* Assets.xcassets */,
 			);
 			path = Ressources;
@@ -472,6 +475,7 @@
 				23AE4D0629F9255900E09B3A /* Root.graphql.swift in Sources */,
 				1E7848C229F7D26B00D941C1 /* FavoriteViewController.swift in Sources */,
 				1E7848BE29F7D19400D941C1 /* TabBarController.swift in Sources */,
+				1E827FC82A00F86D00D67D02 /* Extentions.swift in Sources */,
 				1E78488629F7CAED00D941C1 /* AppDelegate.swift in Sources */,
 				1EFAEDDD29F80E490013022F /* Network.swift in Sources */,
 				1E91C5B629FA71C4008288A0 /* FilmsListView.swift in Sources */,

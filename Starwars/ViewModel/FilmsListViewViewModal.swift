@@ -15,14 +15,15 @@ protocol FilmsListViewViewModalDelegate:AnyObject {
 final class FilmsListViewViewModal :NSObject {
     public weak var delegate : FilmsListViewViewModalDelegate?
     
-    /*private var filmsList : [Film] = [] {
+    private var filmsList : [Film] = [] {
         didSet {
             for film in filmsList {
-                //let viewModal = FilmsCollectionViewCellViewModal(filmTitle: (film.title)!)
+                let viewModal = FilmsCollectionViewCellViewModal(filmTitle: (film.title)!, filmImage: "movies-film-cinema-movie-theater")
+                print(film.title)
                 cellViewModals.append(viewModal)
             }
         }
-    }*/
+    }
     
     private var cellViewModals : [FilmsCollectionViewCellViewModal] = []
     
@@ -35,7 +36,8 @@ final class FilmsListViewViewModal :NSObject {
 
                 print("=============================")
                 let films = allFilms.map { Film($0) }
-                print(films)
+                //print(films)
+                self.filmsList = films
                 
                 DispatchQueue.main.async {
                     self.delegate?.DidLoadInitalFilms()
