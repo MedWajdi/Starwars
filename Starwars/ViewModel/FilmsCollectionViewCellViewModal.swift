@@ -11,6 +11,7 @@ import UIKit
 final class FilmsCollectionViewCellViewModal  {
     
     //MARK: -Propriets
+    
     public let filmTitle: String
     private let filmImage: String
     
@@ -23,6 +24,4 @@ final class FilmsCollectionViewCellViewModal  {
     }
     
 }
-
-
 
