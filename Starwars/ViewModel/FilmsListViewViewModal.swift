@@ -19,7 +19,7 @@ final class FilmsListViewViewModal :NSObject {
         didSet {
             for film in filmsList {
                 let viewModal = FilmsCollectionViewCellViewModal(filmTitle: (film.title)!, filmImage: "movies-film-cinema-movie-theater")
-                print(film.title)
+                //print(film.title)
                 cellViewModals.append(viewModal)
             }
         }
@@ -33,10 +33,7 @@ final class FilmsListViewViewModal :NSObject {
             guard let data = try? result.get().data else { return }
             
             if let allFilms = data.allFilms?.films {
-
-                print("=============================")
                 let films = allFilms.map { Film($0) }
-                //print(films)
                 self.filmsList = films
                 
                 DispatchQueue.main.async {
@@ -44,6 +41,10 @@ final class FilmsListViewViewModal :NSObject {
                 }
             }
         }
+        // MARK: TODO
+        //===================
+            
+        //===================
     }
 }
 
