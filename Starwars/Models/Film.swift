@@ -9,20 +9,18 @@ import Foundation
 
 public typealias GraphQLFilm = GraphQL.GetAllFilmsQuery.Data.AllFilms.Film
 
-
-public struct Film : Hashable {
+public struct Film: Hashable {
     // MARK: - Properties
-    public let id : String?
-    public let title : String?
-    public let releaseDate : String?
-    public let created : String?
-    public let director : String?
-    public let edited : String?
-    public let episodeID : Int?
-    public let openingCrawl : String?
-    public let producers : [String?]?
-    public let characterConnection : CharacterConnection?
-
+    public let id: String?
+    public let title: String?
+    public let releaseDate: String?
+    public let created: String?
+    public let director: String?
+    public let edited: String?
+    public let episodeID: Int?
+    public let openingCrawl: String?
+    public let producers: [String?]?
+    public let characterConnection: CharacterConnection?
 
     // MARK: - Initialization
 
@@ -38,7 +36,7 @@ public struct Film : Hashable {
         self.producers = film?.producers
         self.characterConnection = CharacterConnection(film?.characterConnection)
     }
-    
+    /*
     public init(_ film: Film) {
         self.id = film.id
         self.title = film.title
@@ -51,4 +49,5 @@ public struct Film : Hashable {
         self.producers = film.producers
         self.characterConnection = film.characterConnection
     }
+     */
 }

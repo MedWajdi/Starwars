@@ -7,19 +7,17 @@
 
 import UIKit
 
-
 final class MenuViewController: UIViewController {
     private let filmsListView = FilmsListView()
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Menu"
         setUpView()
     }
-    
-    private func setUpView(){
+
+    private func setUpView() {
         view.addSubview(filmsListView)
         NSLayoutConstraint.activate([
             filmsListView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -27,7 +25,6 @@ final class MenuViewController: UIViewController {
             filmsListView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             filmsListView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor)
         ])
-        
     }
-    
+
 }

@@ -15,11 +15,11 @@ public extension Publishers {
     struct GraphQLFetch<Query: GraphQLQuery>: Publisher {
         public typealias Output = GraphQLResult<Query.Data>
         public typealias Failure = Error
-        
+
         private let client: ApolloClient
         private let query: Query
         private let cachePolicy: CachePolicy
-        
+
         // MARK: - Initialization
 
         init(client: ApolloClient, query: Query, cachePolicy: CachePolicy) {
@@ -29,7 +29,10 @@ public extension Publishers {
         }
 
         public func receive<S: Subscriber>(subscriber: S) where Failure == S.Failure, Output == S.Input {
-            let subscription = GraphQLFetchSubscription(subscriber: subscriber, query: query, cachePolicy: cachePolicy, client: client)
+        let subscription = GraphQLFetchSubscription(subscriber: subscriber,
+                                                    query: query,
+                                                    cachePolicy: cachePolicy,
+                                                    client: client)
             subscriber.receive(subscription: subscription)
         }
     }
@@ -50,8 +53,7 @@ public extension Publishers {
         }
 
         func request(_ demand: Subscribers.Demand) {
-            task = client.fetch(query: query, cachePolicy: cachePolicy)
-            { [weak self] result in
+            task = client.fetch(query: query, cachePolicy: cachePolicy) { [weak self] result in
                 switch result {
                 case .success(let data):
                     _ = self?.subscriber?.receive(data)

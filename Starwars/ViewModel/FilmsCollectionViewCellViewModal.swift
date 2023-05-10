@@ -7,21 +7,17 @@
 
 import UIKit
 
+final class FilmsCollectionViewCellViewModal {
 
-final class FilmsCollectionViewCellViewModal  {
-    
-    //MARK: -Propriets
-    
+    // MARK: - Propriets
+
     public let filmTitle: String
     private let filmImage: String
-    
-    
-    // MARK: -Init
-    
-    init(filmTitle: String,filmImage: String) {
+
+    // MARK: - Init
+
+    init(filmTitle: String, filmImage: String) {
         self.filmTitle = filmTitle
         self.filmImage = filmImage
     }
-    
 }
-
