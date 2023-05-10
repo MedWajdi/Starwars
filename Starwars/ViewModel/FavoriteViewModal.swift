@@ -10,13 +10,12 @@ import Combine
 import ComposableArchitecture
 import OSLog
 
-
 protocol FavoriteViewModalInputs {
     func fetchFilms()
 }
 
 protocol FavoriteViewModalOutputs {
-    var films: Effect<[Film], Never> { get }
+    var films: EffectTask<[Film]> { get }
 }
 
 protocol FavoriteViewModalType {
@@ -27,17 +26,16 @@ protocol FavoriteViewModalType {
 final class FavoriteViewModal: FavoriteViewModalInputs, FavoriteViewModalOutputs {
 
     // MARK: - Properties
-    private let filmsClient : GraphQLClient
+    private let filmsClient: GraphQLClient
     private let mainQueue: AnySchedulerOf<DispatchQueue>
     private let logger = Logger()
     private let filmsSubject: CurrentValueSubject<[Film], Never> = .init([])
     private var disposables = Set<AnyCancellable>()
-    
-    
+
     // MARK: - Inputs
-    
+
     func fetchFilms() {
-        //Network.shared.apolloClient.fetch(query: GraphQL.GetAllFilmsQuery())
+        // Network.shared.apolloClient.fetch(query: GraphQL.GetAllFilmsQuery())
         filmsClient.fetchFilms()
             .receive(on: mainQueue)
             .sink(receiveCompletion: {completion in
@@ -49,13 +47,13 @@ final class FavoriteViewModal: FavoriteViewModalInputs, FavoriteViewModalOutputs
             })
             .store(in: &disposables)
     }
-    
+
     // MARK: - Outputs
-    
-    var films: Effect<[Film], Never> {
+
+    var films: EffectTask<[Film]> {
         filmsSubject.eraseToEffect()
     }
-    
+
     // MARK: - Initialization
 
     init(
@@ -65,12 +63,9 @@ final class FavoriteViewModal: FavoriteViewModalInputs, FavoriteViewModalOutputs
         self.mainQueue = mainQueue
         self.filmsClient = filmsClient
     }
-    
-    
 }
 
 extension FavoriteViewModal: FavoriteViewModalType {
-
     var inputs: FavoriteViewModalInputs {
         self
     }

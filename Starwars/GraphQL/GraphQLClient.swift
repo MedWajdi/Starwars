@@ -20,18 +20,20 @@ public struct GraphQLClient {
     private var performResponses: [Int: Any] = [:]
     private var fetchResponses: [Int: Any] = [:]
     let logger = Logger()
-    
+
     // MARK: - Fetch
 
-    public func fetch<Query: GraphQLQuery>(_ query: Query, cachePolicy: CachePolicy = .fetchIgnoringCacheCompletely) -> Effect<GraphQLResult<Query.Data>, Error> {
+public func fetch<Query: GraphQLQuery>(_ query: Query,
+                                       cachePolicy: CachePolicy = .fetchIgnoringCacheCompletely) ->
+                                       EffectPublisher<GraphQLResult<Query.Data>, Error> {
         if let error = error {
             return Fail<GraphQLResult<Query.Data>, Error>(error: error)
                 .eraseToEffect()
         }
 
-        let fetchResult: Effect<GraphQLResult<Query.Data>, Error>
+        let fetchResult: EffectPublisher<GraphQLResult<Query.Data>, Error>
 
-        if let response = fetchResponses[query.hashValue] as? Effect<GraphQLResult<Query.Data>, Error> {
+        if let response = fetchResponses[query.hashValue] as? EffectPublisher<GraphQLResult<Query.Data>, Error> {
             fetchResult = response
         } else {
             fetchResult = Publishers.GraphQLFetch(client: client, query: query, cachePolicy: cachePolicy)
@@ -62,32 +64,16 @@ public struct GraphQLClient {
     }
 
     // MARK: - Initialization
-    
-    public init(client: ApolloClient!, error: GraphQLClientError?, performResponses: [Int : Any], fetchResponses: [Int : Any]) {
+
+public init(client: ApolloClient!,
+            error: GraphQLClientError?,
+            performResponses: [Int: Any],
+            fetchResponses: [Int: Any]) {
         self.client = client
         self.error = error
         self.performResponses = performResponses
         self.fetchResponses = fetchResponses
     }
-    
-
-    /*public init(host: URLHost, userDefaultsClient: UserDefaultsClient, error: GraphQLClientError? = nil) {
-        let url =  URL(string: host.rawValue)
-        let store = ApolloStore()
-        let interceptorProvider = NetworkInterceptorsProvider(
-            interceptors: [
-                AuthInterceptor(userDefaultsClient: userDefaultsClient),
-                UserTrackingInterceptor(userTrackingId: userDefaultsClient.userTrackingId)
-            ],
-            store: store
-        )
-        let networkTransport = RequestChainNetworkTransport(
-            interceptorProvider: interceptorProvider, endpointURL: url!
-        )
-        self.client = ApolloClient(networkTransport: networkTransport, store: store)
-        self.error = error
-    }*/
-    
 }
 
 private extension GraphQLClient {
@@ -105,19 +91,11 @@ public extension GraphQLClient {
     }
 }
 
-/*
-extension GraphQLClient {
-    public static let noop = Self (host: .default, userDefaultsClient: .noop)
-    public static let error = Self (host: .default, userDefaultsClient: .noop, error: .unknown)
-}
-*/
-
 extension GraphQLClient {
     public mutating func overrideFetch<Query: GraphQLQuery>(
         query matchingQuery: Query,
-        withResponse response: Effect<GraphQLResult<Query.Data>, Error>
+        withResponse response: EffectPublisher<GraphQLResult<Query.Data>, Error>
     ) {
         self.fetchResponses[matchingQuery.hashValue] = response
     }
 }
-

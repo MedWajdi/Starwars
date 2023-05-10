@@ -9,14 +9,12 @@ import Foundation
 
 public typealias GraphQLCharacterConnection = GraphQL.GetAllFilmsQuery.Data.AllFilms.Film.CharacterConnection
 
-
-public struct CharacterConnection : Hashable {
+public struct CharacterConnection: Hashable {
 
     // MARK: - Properties
 
-    public var characters : [Character?]? = []
-    public let totalCount : Int?
-
+    public var characters: [Character?]? = []
+    public let totalCount: Int?
 
     // MARK: - Initialization
 
@@ -24,7 +22,6 @@ public struct CharacterConnection : Hashable {
         if let characters = characterConnection?.characters {
             self.characters = characters.map { Character($0)}
         }
-        self.totalCount = characterConnection?.totalCount
-        
+self.totalCount = characterConnection?.totalCount
     }
 }

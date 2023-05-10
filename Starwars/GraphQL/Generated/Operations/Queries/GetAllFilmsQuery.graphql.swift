@@ -1,5 +1,6 @@
 // @generated
 // This file was automatically generated and should not be edited.
+// swiftlint:disable all
 
 @_exported import ApolloAPI
 
@@ -169,3 +170,4 @@ public extension GraphQL {
   }
 
 }
+// swiftlint:enable all
