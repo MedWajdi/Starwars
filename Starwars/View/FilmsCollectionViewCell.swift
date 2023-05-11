@@ -29,14 +29,6 @@ final class FilmsCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
 
-    private let detailsStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.spacing = CGFloat(8.0)
-        stackView.alignment = .center
-        return stackView
-    }()
-
     // MARK: - Init
 
     override init(frame: CGRect) {

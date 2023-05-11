@@ -10,26 +10,22 @@ import UIKit
 // this view handles showing list of characters
 final class FilmsListView: UIView {
 
-    private let viewModal = FilmsListViewViewModal()
-
-    private let spinner: UIActivityIndicatorView = {
+    let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
         spinner.hidesWhenStopped = true
         spinner.translatesAutoresizingMaskIntoConstraints = false
         return spinner
     }()
 
-    private let collectionView: UICollectionView = {
+    let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.isHidden = true
-        collectionView.alpha = 0
+        collectionView.alpha = 1
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(FilmsCollectionViewCell.self,
                             forCellWithReuseIdentifier: FilmsCollectionViewCell.cellIdentifier)
-
         return collectionView
     }()
 
@@ -41,10 +37,6 @@ final class FilmsListView: UIView {
         addSubViews(collectionView, spinner)
         addConstraints()
         spinner.startAnimating()
-        // receving side of delegate toggle
-        viewModal.delegate = self
-        viewModal.fetchFilms()
-        setUpCollectionView()
     }
 
     required init?(coder: NSCoder) {
@@ -62,22 +54,5 @@ final class FilmsListView: UIView {
             collectionView.rightAnchor.constraint(equalTo: rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-    }
-
-    private func setUpCollectionView() {
-        collectionView.dataSource = viewModal
-        collectionView.delegate = viewModal
-    }
-}
-
-extension FilmsListView: FilmsListViewViewModalDelegate {
-    func didLoadInitalFilms() {
-        spinner.stopAnimating()
-        collectionView.isHidden = false
-        collectionView.reloadData() // Reload for the initial fetch of data
-
-        UIView.animate(withDuration: 0.4) {
-            self.collectionView.alpha = 1
-        }
     }
 }

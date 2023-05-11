@@ -57,7 +57,7 @@ final class FavoriteViewController: UITableViewController {
             .sink { [weak self]  in
                 // populate videw with reveived value
                 self?.films.append(contentsOf: $0)
-                //print(self?.films)
+                // print(self?.films)
                 self?.tableView.reloadData()
             }
             .store(in: &disposables)
