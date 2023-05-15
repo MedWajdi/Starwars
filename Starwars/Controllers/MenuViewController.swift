@@ -10,7 +10,9 @@ import UIKit
 final class MenuViewController: UIViewController {
 
     // MARK: - Properties
+    // the view model should be injected into this class
     let viewModal = FilmsListViewViewModal()
+
     private var filmsListView = FilmsListView()
     private var cellViewModals: [FilmsCollectionViewCellViewModal] = []
     private var filmsList: [Film] = [] {
@@ -22,6 +24,9 @@ final class MenuViewController: UIViewController {
              }
         }
     }
+    // releted to data sent to filmDetails
+    var delegate: FilmDetailsViewController!
+    var sentFilm: Film? = nil
 
     // MARK: - Lifecycle
 
@@ -31,7 +36,10 @@ final class MenuViewController: UIViewController {
         title = "Menu"
         setUpView()
         fetchFilms()
+
+        // initialize the view model
         viewModal.filmsListViewViewModalDelegate = self
+
         filmsListView.collectionView.dataSource = self
         filmsListView.collectionView.delegate = self
     }
@@ -53,19 +61,14 @@ final class MenuViewController: UIViewController {
     }
 }
 
-extension MenuViewController: FilmsListViewViewModalDelegate {
-    func didLoadInitalFilms(_ films: [Film]) {
-        self.filmsList = films
-        self.filmsListView.collectionView.reloadData()
-        self.filmsListView.spinner.stopAnimating()
-    }
-}
-
 extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+    // Releted to data source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellViewModals.count
     }
 
+    // Releted to data source
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilmsCollectionViewCell.cellIdentifier,
@@ -78,11 +81,28 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
 
+    // Releted to delegate
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let bounds = UIScreen.main.bounds
         let width = (bounds.width-30)/2
         return CGSize(width: width, height: width*1.5)
+    }
+
+    // Releted to delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.sentFilm = filmsList[indexPath.row]
+        self.navigationController?.pushViewController(FilmDetailsViewController(recivedFilm: filmsList[indexPath.row]),
+                                                  animated: true)
+    }
+}
+// notifications from the view model
+extension MenuViewController: FilmsListViewViewModalDelegate {
+    func didLoadInitalFilms(_ films: [Film]) {
+        self.filmsList = films
+        self.filmsListView.spinner.stopAnimating()
+        self.filmsListView.collectionView.alpha = 1
+        self.filmsListView.collectionView.reloadData()
     }
 }
