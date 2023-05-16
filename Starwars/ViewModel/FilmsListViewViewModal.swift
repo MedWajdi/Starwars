@@ -26,10 +26,8 @@ class FilmsListViewViewModal {
                 let films = allFilms.map { Film($0) }
                 DispatchQueue.main.async {
                     self.filmsListViewViewModalDelegate?.didLoadInitalFilms(films)
-                    
                 }
             }
         }
-
     }
 }

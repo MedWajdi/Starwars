@@ -22,7 +22,7 @@ final class FilmsListView: UIView {
         layout.scrollDirection = .vertical
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.alpha = 1
+        collectionView.alpha = 0
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(FilmsCollectionViewCell.self,
                             forCellWithReuseIdentifier: FilmsCollectionViewCell.cellIdentifier)
