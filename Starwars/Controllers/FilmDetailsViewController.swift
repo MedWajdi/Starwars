@@ -18,7 +18,6 @@ final class FilmDetailsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         title = "Details"
-        setUpView()
     }
 
     init(recivedFilm: Film!) {
@@ -26,6 +25,7 @@ final class FilmDetailsViewController: UIViewController {
         self.recivedFilm = recivedFilm
         fetchData()
         setUpView()
+        // view.addSubview(filmDetailsView)
     }
 
     required init?(coder: NSCoder) {
@@ -35,9 +35,10 @@ final class FilmDetailsViewController: UIViewController {
     // MARK: - Setup
 
     private func setUpView() {
-        view.addSubview(filmDetailsView) // add the subview to the view hierarchy
-        filmDetailsView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+        view.addSubview(filmDetailsView)
+        filmDetailsView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+            make.top.bottom.trailing.leading.equalToSuperview()
         }
     }
 
@@ -48,18 +49,18 @@ final class FilmDetailsViewController: UIViewController {
         } else {
             filmDetailsView.imageView = UIImageView(image: UIImage(named: "movies-film-cinema-movie-theater"))
         }
-        filmDetailsView.title.text = "Film Title: " + (recivedFilm.title ?? "")
-        filmDetailsView.releaseDate.text = "Relese Date: " + (recivedFilm.releaseDate ?? "")
-        filmDetailsView.director.text = "Director: " + (recivedFilm.director ?? "")
+        filmDetailsView.title.text = "🎞 Film Title: \n" + (recivedFilm.title ?? "")
+        filmDetailsView.releaseDate.text = "🗓 Relese Date: \n" + (recivedFilm.releaseDate ?? "")
+        filmDetailsView.director.text = "👨🏼‍🦰 Director: \n" + (recivedFilm.director ?? "")
 
         let optionalProducerNames: [String?] = recivedFilm.producers ?? []
         let nonOptionalProducerNames = optionalProducerNames.compactMap { $0 }
         // nonOptionalProducerNames is now ["Gary Kurtz", "Rick McCallum"]
-        filmDetailsView.producers.text = "Producers: " + nonOptionalProducerNames.joined(separator: " ,")
+        filmDetailsView.producers.text = "👨🏼‍🦰 Producers: \n" + nonOptionalProducerNames.joined(separator: "\n")
 
         let optionalCharacters: [String?] = recivedFilm.characterConnection?.characters?.map { $0?.name } ?? []
-        let characters = optionalCharacters.compactMap { $0 }.joined(separator: " ,")
-        filmDetailsView.characters.text = "Characters: " + characters
+        let characters = optionalCharacters.compactMap { $0 }.joined(separator: "\n")
+        filmDetailsView.characters.text = "👨🏼‍🦰 Characters: \n" + characters
     }
 
 }

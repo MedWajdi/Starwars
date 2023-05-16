@@ -8,11 +8,18 @@
 import UIKit
 
 final class FilmDetailsView: UIView {
-    /*var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        return scrollView
-    }()*/
+
+    let scrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    private let contentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -68,13 +75,9 @@ final class FilmDetailsView: UIView {
         return characters
     }()
 
-    private let contentView = UIView()
-
     override init(frame: CGRect) {
         super.init(frame: frame)
-        // addSubview(scrollView)
-        // scrollView.addSubViews(imageView, title, releaseDate, director, producers, characters)
-        addSubViews(imageView, title, releaseDate, director, producers, characters)
+        setupView()
         addConstraints()
     }
 
@@ -82,20 +85,38 @@ final class FilmDetailsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func setupView() {
+        addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubViews(imageView, title, releaseDate, director, producers, characters)
+    }
+
     private func addConstraints() {
+
+        scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+
+        contentView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            // $0.width.equalTo(scrollView.snp.width)
+            $0.width.equalToSuperview()
+            // Set the content size for the scrollView
+            $0.bottom.equalToSuperview()
+        }
+
         // Set constraints for the image view
         imageView.snp.makeConstraints {
-            $0.top.equalTo(150)
+            $0.top.equalTo(0)
+            $0.centerX.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(300)
+            // $0.width.equalToSuperview().offset(-60)
             $0.height.equalTo(350)
         }
 
         // Set constraints for the title label
         title.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.top.equalTo(imageView.snp.bottom).offset(10)
@@ -103,14 +124,13 @@ final class FilmDetailsView: UIView {
 
         // Set constraints for the release date label
         releaseDate.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
             $0.top.equalTo(title.snp.bottom).offset(10)
         }
 
         // Set constraints for the director label
         director.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.top.equalTo(releaseDate.snp.bottom).offset(10)
@@ -118,7 +138,7 @@ final class FilmDetailsView: UIView {
 
         // Set constraints for the producers label
         producers.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
+            // $0.centerX.equalToSuperview()
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
             $0.top.equalTo(director.snp.bottom).offset(10)
@@ -126,10 +146,10 @@ final class FilmDetailsView: UIView {
 
         // Set constraints for the characters label
         characters.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.leading.trailing.equalToSuperview().offset(20)
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
             $0.top.equalTo(producers.snp.bottom).offset(10)
-            // $0.bottom.equalToSuperview().offset(-50)
+            $0.bottom.equalTo(scrollView.snp.bottom)
         }
     }
 }
